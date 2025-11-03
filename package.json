@@ -1,0 +1,24 @@
+{
+  "name": "click_dropdown_menu",
+  "version": "1.0.0",
+  "description": "A generic clickable drop down menu",
+  "keywords": [
+    "dropdown",
+    "menu"
+  ],
+  "homepage": "https://github.com/noOdin1/click_dropdown_menu#readme",
+  "bugs": {
+    "url": "https://github.com/noOdin1/click_dropdown_menu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noOdin1/click_dropdown_menu.git"
+  },
+  "license": "ISC",
+  "author": "noOdin1",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
