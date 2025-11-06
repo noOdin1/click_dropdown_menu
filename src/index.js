@@ -160,3 +160,11 @@ const htmlDropDown = (
   return Object.assign(btnContainer, htmlOps(btnContainer));
 };
 
+/* function to add all the elements to any div */
+const addClickDropDown = (() => {
+  addStyleSheet(cssScript);
+  // let tmpDiv = htmlDropDown();
+  // document.body.appendChild(tmpDiv);
+  // cdi(tmpDiv);
+  document.body.appendChild(htmlDropDown());
+})();
