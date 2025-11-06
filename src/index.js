@@ -119,3 +119,13 @@ function clickDropDown() {
   document.getElementById("dropDownMenu").classList.toggle("show");
 }
 
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    if (dropdowns[0].classList.contains("show")) {
+      dropdowns[0].classList.remove("show");
+    }
+  }
+};
+
