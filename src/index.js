@@ -129,3 +129,34 @@ window.onclick = function (event) {
   }
 };
 
+/* function to create the html elements for the drop down menu */
+const htmlDropDown = (
+  buttonContainerClass = btnCntClass,
+  dropDownButtonId = dropdownBtnId,
+  dropDownButtonClass = dropdownBtnClass,
+  dropDownMenuId = dropdownMenuId,
+  dropDownMenuClass = dropdownMenuClass,
+  dropDownMenuItems = menuItems,
+) => {
+  let btnContainer = createDiv(buttonContainerClass);
+
+  let btn = createButton(dropDownButtonClass, dropDownButtonId);
+  btn.setText("Dropdown");
+
+  let dropDownMenu = createDiv(dropDownMenuClass, dropDownMenuId);
+  Object.keys(dropDownMenuItems).forEach((item) => {
+    let tmpMenuItem = createA(
+      menuItems[item][1],
+      menuItems[item][2],
+      menuItems[item][0],
+    );
+    tmpMenuItem.setText(item);
+    dropDownMenu.appendChild(tmpMenuItem);
+  });
+  btnContainer.appendChild(btn);
+  btnContainer.appendChild(dropDownMenu);
+  btn.addEventListener("click", clickDropDown);
+
+  return Object.assign(btnContainer, htmlOps(btnContainer));
+};
+
