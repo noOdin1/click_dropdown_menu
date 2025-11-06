@@ -14,7 +14,6 @@ import {
   createInput,
   createSelect,
   createOption,
-  htmlOps,
 } from "./element_creator.js";
 export {
   htmlDropDown,
@@ -92,10 +91,12 @@ let cssScript = `
   padding: 0.8em 1em;
   text-decoration: none;
   display: block;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .${dropdownMenuClass} a:hover {
   background-color: #aaa;
+  box-shadow: 8px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .show {
@@ -169,7 +170,7 @@ const htmlDropDown = (
   btnContainer.appendChild(dropDownMenu);
   btn.addEventListener("click", clickDropDown);
 
-  return Object.assign(btnContainer, htmlOps(btnContainer));
+  return Object.assign(btnContainer);
 };
 
 /* function to add all the elements to any div */
