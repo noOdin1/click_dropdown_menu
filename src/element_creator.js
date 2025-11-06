@@ -2,6 +2,7 @@
 export default createElement;
 export {
   createP,
+  createA,
   createDiv,
   createButton,
   createImg,
@@ -12,6 +13,7 @@ export {
   createInput,
   createSelect,
   createOption,
+  htmlOps,
 };
 
 function createElement(elemType, class_list, unique_id, text_content) {
@@ -152,8 +154,8 @@ const createA = (htmlClass, htmlId, href) => {
 
 const createButton = (htmlClass, htmlId, text) => {
   let elem = elementFactory("button", htmlClass, htmlId);
-  if (!check().isNullUndefined(content)) {
-    htmlOps(elem).setText(content);
+  if (!check().isNullUndefined(text)) {
+    htmlOps(elem).setText(text);
   }
   return Object.assign(elem, htmlOps(elem));
 };
