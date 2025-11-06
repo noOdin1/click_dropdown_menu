@@ -16,7 +16,19 @@ import {
   createOption,
   htmlOps,
 } from "./element_creator.js";
-export { htmlDropDown, clickDropDown, addStyleSheet };
+export {
+  htmlDropDown,
+  clickDropDown,
+  addStyleSheet,
+  btnCntClass,
+  dropdownBtnId,
+  dropdownBtnClass,
+  dropdownBtnTxt,
+  dropdownMenuId,
+  dropdownMenuClass,
+  menuItems,
+  cssScript,
+};
 
 /**
  * Variables that can be set by the module user before creating the
