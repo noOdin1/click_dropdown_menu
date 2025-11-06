@@ -16,3 +16,5 @@ import {
   createOption,
   htmlOps,
 } from "./element_creator.js";
+export { htmlDropDown, clickDropDown, addStyleSheet };
+
