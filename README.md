@@ -40,9 +40,9 @@ and links to other resources. The following is the structure for this variable:<
 One possible example for this would be:<br>
 <pre>
   menuItems = {
-    Home: ["home.html", "menuItems listItems", ""],
-    About: ["about.html", "menuItems listItems", ""],
-    Contact: ["contact.html", "menuItems listItems", ""],
+    Home: ["home.html", "menuItems listItems", "homeMenuItemId"],
+    About: ["about.html", "menuItems listItems", "aboutMenuItemId"],
+    Contact: ["contact.html", "menuItems listItems", "contactMenuItemId"],
   }
 </pre>
 
@@ -53,9 +53,9 @@ Example of using module:
 <pre>
   dropdownBtnTxt = "new text";
   menuItems = {
-    Home: ["home.html", "menuItems listItems", ""],
-    About: ["about.html", "menuItems listItems", ""],
-    Contact: ["contact.html", "menuItems listItems", ""],
+    Home: ["home.html", "menuItems listItems", "homeMenuItemId"],
+    About: ["about.html", "menuItems listItems", "aboutMenuItemId"],
+    Contact: ["contact.html", "menuItems listItems", "contactMenuItemId"],
   }
   let dropDownButton = htmlDropDown();
   document.body.appendChild(dropDownButton);
