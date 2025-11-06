@@ -9,6 +9,19 @@ the user will interact with is: <br />
 This function will return a html 'div' element. The returned html 'div' <br />
 element will contain: <br />
 <pre>
-  1. button<br />
-  2. menu list<br />
+  1. button
+  2. menu list
+</pre>
+
+The following variables are used to change the drop down menu text and menu items: <br>
+
+<pre>
+  1. dropdownBtnTxt
+  2. menuItems
+</pre>
+
+To change the button text:
+
+<pre>
+  dropdownBtnTxt = "new text";
 </pre>
