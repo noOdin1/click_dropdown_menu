@@ -103,3 +103,13 @@ function cta(str) {
   console.table(str);
 }
 
+function addStyleSheet(cssScript = cssScript) {
+  /* Dynamically insert css styling */
+  let style = document.createElement("style");
+  style.type = "text/css"; // set the style type
+  // Add the CSS rules to the style statement
+  style.appendChild(document.createTextNode(cssScript));
+
+  document.head.appendChild(style);
+}
+
