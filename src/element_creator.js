@@ -13,7 +13,6 @@ export {
   createInput,
   createSelect,
   createOption,
-  htmlOps,
 };
 
 function createElement(elemType, class_list, unique_id, text_content) {
