@@ -116,13 +116,13 @@ function addStyleSheet(cssScript = cssScript) {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function clickDropDown() {
-  document.getElementById("dropDownMenu").classList.toggle("show");
+  document.getElementById(dropdownMenuId).classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    let dropdowns = document.getElementsByClassName("dropdown-content");
+  if (!event.target.matches(`.${dropdownBtnClass}`)) {
+    let dropdowns = document.getElementsByClassName(dropdownMenuClass);
     if (dropdowns[0].classList.contains("show")) {
       dropdowns[0].classList.remove("show");
     }
@@ -141,7 +141,7 @@ const htmlDropDown = (
   let btnContainer = createDiv(buttonContainerClass);
 
   let btn = createButton(dropDownButtonClass, dropDownButtonId);
-  btn.setText("Dropdown");
+  btn.setText(`${dropdownBtnTxt}`);
 
   let dropDownMenu = createDiv(dropDownMenuClass, dropDownMenuId);
   Object.keys(dropDownMenuItems).forEach((item) => {
@@ -163,8 +163,5 @@ const htmlDropDown = (
 /* function to add all the elements to any div */
 const addClickDropDown = (() => {
   addStyleSheet(cssScript);
-  // let tmpDiv = htmlDropDown();
-  // document.body.appendChild(tmpDiv);
-  // cdi(tmpDiv);
   document.body.appendChild(htmlDropDown());
 })();
