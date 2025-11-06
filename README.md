@@ -26,7 +26,7 @@ To change the button text:
   dropdownBtnTxt = "new text";
 </pre>
 
-Do this before calling <pre>'htmlDropDown()'</pre>. <br>
+Do this before calling <pre>'htmlDropDown()'.</pre> <br>
 
 <h3>Changing the menu items display and links</h3>
 The variable 'menuItems' is the variable responsible to for text on the items and<br>
@@ -46,4 +46,4 @@ One possible example for this would be:<br>
   }
 </pre>
 
-Do this before calling <pre>'htmlDropDown()'</pre>. <br>
+Do this before calling <pre>'htmlDropDown()'.</pre> <br>
