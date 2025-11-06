@@ -47,3 +47,16 @@ One possible example for this would be:<br>
 </pre>
 
 Do this before calling <pre>'htmlDropDown()'.</pre> <br>
+
+Example of using module:
+
+<pre>
+  dropdownBtnTxt = "new text";
+  menuItems = {
+    Home: ["home.html", "menuItems listItems", ""],
+    About: ["about.html", "menuItems listItems", ""],
+    Contact: ["contact.html", "menuItems listItems", ""],
+  }
+  let dropDownButton = htmlDropDown();
+  document.body.appendChild(dropDownButton);
+</pre>
