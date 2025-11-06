@@ -25,3 +25,25 @@ To change the button text:
 <pre>
   dropdownBtnTxt = "new text";
 </pre>
+
+Do this before calling <pre>'htmlDropDown()'</pre>. <br>
+
+<h3>Changing the menu items display and links</h3>
+The variable 'menuItems' is the variable responsible to for text on the items and<br>
+and links to other resources. The following is the structure for this variable:<br>
+<pre>
+  menuItems is an object with the following,
+  {
+    name: ['href link', 'classes', 'unique id for the item']
+  }
+</pre>
+One possible example for this would be:<br>
+<pre>
+  menuItems = {
+    Home: ["home.html", "menuItems listItems", ""],
+    About: ["about.html", "menuItems listItems", ""],
+    Contact: ["contact.html", "menuItems listItems", ""],
+  }
+</pre>
+
+Do this before calling <pre>'htmlDropDown()'</pre>. <br>
