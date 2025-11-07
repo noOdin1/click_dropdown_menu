@@ -124,6 +124,14 @@ function clickDropDown() {
   document.getElementById(dropdownMenuId).classList.toggle("show");
 }
 
+const setButtonText = (str) => {
+  let tmpBtn = document.getElementById(`${dropdownBtnId}`);
+  if (tmpBtn == null || tmpBtn == undefined) {
+    clo(`[${setButtonText.name}] Button not defined yet.`);
+    return;
+  }
+  tmpBtn.innerHTML = str;
+};
 
 function removeAllChildElemById(elem) {
   let child = elem.lastElementChild;
