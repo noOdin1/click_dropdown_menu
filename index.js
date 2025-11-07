@@ -111,3 +111,9 @@ function addStyleSheet(cssScript = cssScript) {
   document.head.appendChild(style);
 }
 
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function clickDropDown() {
+  document.getElementById(dropdownMenuId).classList.toggle("show");
+}
+
