@@ -89,3 +89,15 @@ let cssScript = `
 }
 `;
 
+function clo(str) {
+  console.log(str);
+}
+
+function cdi(str) {
+  console.dir(str);
+}
+
+function cta(str) {
+  console.table(str);
+}
+
