@@ -125,6 +125,36 @@ function clickDropDown() {
 }
 
 
+function removeAllChildElemById(elem) {
+  let child = elem.lastElementChild;
+
+  while (child) {
+    elem.removeChild(child);
+    child = elem.lastElementChild;
+  }
+}
+
+const setMenuItems = (obj) => {
+  if (obj == null || obj == undefined) {
+    clo(`[${setMenuItems.name}] Empty object passed in`);
+    return;
+  }
+  let tmpMenu = document.getElementById(`${dropdownMenuId}`);
+  if (tmpMenu == null || tmpMenu == undefined) {
+    clo(`[${setMenuItems.name}] Menu not found`);
+    return;
+  }
+
+  removeAllChildElemById(tmpMenu);
+
+  Object.keys(obj).forEach((item) => {
+    let tmpMenuItem = createA(obj[item][1], obj[item][2], obj[item][0]);
+    tmpMenuItem.setText(item);
+
+    tmpMenu.appendChild(tmpMenuItem);
+  });
+};
+
 /* function to create the html elements for the drop down menu */
 const htmlDropDown = (
   buttonContainerClass = btnCntClass,
@@ -167,4 +197,3 @@ const htmlDropDown = (
 
   return Object.assign(btnContainer);
 };
-
