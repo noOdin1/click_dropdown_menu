@@ -1,6 +1,6 @@
 {
   "name": "@robbiemowe/click_dropdown_menu",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A generic clickable drop down menu",
   "keywords": [
     "dropdown",
@@ -18,10 +18,7 @@
   "author": "noOdin1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack serve --config webpack.dev.js",
-    "deploy": "git subtree push --prefix dist origin todo_list_prod"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
