@@ -14,3 +14,78 @@ import {
   createSelect,
   createOption,
 } from "./element_creator.js";
+
+/**
+ * Variables that can be set by the module user before creating the
+ * drop down menu.
+ **/
+let btnCntClass = "dropdown";
+let dropdownBtnId = "dropDownBtn";
+let dropdownBtnClass = "dropbtn";
+let dropdownBtnTxt = "Dropdown";
+let dropdownMenuId = "dropDownMenu";
+let dropdownMenuClass = "dropdown-content";
+let menuItems = {
+  /**
+   * Object to hold the menu items inside the drop down menu
+   * This object structure would be:
+   *  { name: [classnames, id, href_link], }
+   *   where:
+   *     'name' will appear on the 'a' innerHTML
+   *     'href_link' will be the link to redirect when it's clicked on
+   *     'classnames' will be a space separated class names
+   *     'id' is the unique id to identify the menu item
+   **/
+  // name: [href_link, classnames, id],
+  Home: ["#home", "menuItem listItem", ""],
+  Categories: ["#category", "menuItem listItem", ""],
+  About: ["#about", "menuItem listItem", ""],
+  Contact: ["#contact", "menuItem listItem", ""],
+};
+let cssScript = `
+.${dropdownBtnClass} {
+  background-color: #0099FF;
+  color: black;
+  font-size: 16px;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.${dropdownBtnClass}:hover,
+.${dropdownBtnClass}:focus {
+  background-color: #0033EE;
+  color: white;
+}
+
+.${btnCntClass} {
+  position: relative;
+  display: inline-block;
+}
+
+.${dropdownMenuClass} {
+  display: none;
+  position: absolute;
+  background-color: #fefefe;
+  min-width: 10em;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.${dropdownMenuClass} a {
+  color: black;
+  padding: 0.8em 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.${dropdownMenuClass} a:hover {
+  background-color: #aaa;
+  box-shadow: 8px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.show {
+  display: block;
+}
+`;
+
