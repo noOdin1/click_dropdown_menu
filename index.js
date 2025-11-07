@@ -14,6 +14,13 @@ import {
   createSelect,
   createOption,
 } from "./element_creator.js";
+export {
+  htmlDropDown,
+  setButtonText,
+  setMenuItems,
+  clickDropDown,
+  addStyleSheet,
+};
 
 /**
  * Variables that can be set by the module user before creating the
