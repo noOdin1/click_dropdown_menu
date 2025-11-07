@@ -1,10 +1,10 @@
 <h1>A generic drop down menu</h1>
 This is a generic drop down menu that shows the menu when the<br />
-user clicks on the button. The module will have variables and function<br /> 
-exports for the user to customize the button. The main function that <br />
+user clicks on the button. The module will have function to modify variables for<br /> 
+exports, and used by the users to customize them. The main function that <br />
 the user will interact with is: <br />
 <pre>
-  htmlDropDown
+  htmlDropDown()
 </pre>
 This function will return a html 'div' element. The returned html 'div' <br />
 element will contain: <br />
@@ -13,24 +13,24 @@ element will contain: <br />
   2. menu list
 </pre>
 
-The following variables are used to change the drop down menu text and menu items: <br>
+The following functions are used to change the drop down menu text and menu items: <br>
 
 <pre>
-  1. dropdownBtnTxt
-  2. menuItems
+  1. setButtonText()
+  2. setMenuItems()
 </pre>
 
+<h3>Changing the button text</h3>
 To change the button text:
 
 <pre>
-  dropdownBtnTxt = "new text";
+  setButtonText("new text");
 </pre>
 
-Do this before calling <pre>'htmlDropDown()'.</pre> <br>
+Do this after calling <pre>'htmlDropDown()'.</pre> <br>
 
 <h3>Changing the menu items display and links</h3>
-The variable 'menuItems' is the variable responsible to for text on the items and<br>
-and links to other resources. The following is the structure for this variable:<br>
+The menu accept an object that has the information with this format: <br>
 <pre>
   menuItems is an object with the following,
   {
@@ -39,24 +39,27 @@ and links to other resources. The following is the structure for this variable:<
 </pre>
 One possible example for this would be:<br>
 <pre>
-  menuItems = {
+  setMenuItems({
     Home: ["home.html", "menuItems listItems", "homeMenuItemId"],
     About: ["about.html", "menuItems listItems", "aboutMenuItemId"],
     Contact: ["contact.html", "menuItems listItems", "contactMenuItemId"],
-  }
+  });
 </pre>
 
-Do this before calling <pre>'htmlDropDown()'.</pre> <br>
+Do this after calling <pre>'htmlDropDown()'.</pre> <br>
 
 Example of using module:
 
 <pre>
-  dropdownBtnTxt = "new text";
-  menuItems = {
+  let dropDownButton = htmlDropDown();
+  document.body.appendChild(dropDownButton);
+  setButtonText("new text");
+  setMenuItems({
     Home: ["home.html", "menuItems listItems", "homeMenuItemId"],
     About: ["about.html", "menuItems listItems", "aboutMenuItemId"],
     Contact: ["contact.html", "menuItems listItems", "contactMenuItemId"],
-  }
-  let dropDownButton = htmlDropDown();
-  document.body.appendChild(dropDownButton);
+  });
 </pre>
+
+The function addStyleSheet() is a generic function to add any style sheet <br>
+to the html "head" element.
