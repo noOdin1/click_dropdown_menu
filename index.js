@@ -117,3 +117,47 @@ function clickDropDown() {
   document.getElementById(dropdownMenuId).classList.toggle("show");
 }
 
+
+/* function to create the html elements for the drop down menu */
+const htmlDropDown = (
+  buttonContainerClass = btnCntClass,
+  dropDownButtonId = dropdownBtnId,
+  dropDownButtonClass = dropdownBtnClass,
+  dropDownMenuId = dropdownMenuId,
+  dropDownMenuClass = dropdownMenuClass,
+  dropDownMenuItems = menuItems,
+) => {
+  addStyleSheet(cssScript);
+  let btnContainer = createDiv(buttonContainerClass);
+
+  let btn = createButton(dropDownButtonClass, dropDownButtonId);
+  btn.setText(`${dropdownBtnTxt}`);
+
+  let dropDownMenu = createDiv(dropDownMenuClass, dropDownMenuId);
+  Object.keys(dropDownMenuItems).forEach((item) => {
+    let tmpMenuItem = createA(
+      menuItems[item][1],
+      menuItems[item][2],
+      menuItems[item][0],
+    );
+    tmpMenuItem.setText(item);
+    dropDownMenu.appendChild(tmpMenuItem);
+  });
+  btnContainer.appendChild(btn);
+  btnContainer.appendChild(dropDownMenu);
+  btn.addEventListener("click", clickDropDown);
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function (event) {
+    // globalThis.onclick = function (event) {
+    if (!event.target.matches(`.${dropdownBtnClass}`)) {
+      let dropdowns = document.getElementsByClassName(dropdownMenuClass);
+      if (dropdowns[0].classList.contains("show")) {
+        dropdowns[0].classList.remove("show");
+      }
+    }
+  };
+
+  return Object.assign(btnContainer);
+};
+
