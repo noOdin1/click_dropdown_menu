@@ -63,3 +63,31 @@ Example of using module:
 
 The function addStyleSheet() is a generic function to add any style sheet <br>
 to the html "head" element.
+
+<h3>Export list for users</h3>
+The following are the functions listed for export:
+<pre>
+  htmlDropDown()
+  setButtonText()
+  setMenuItems()
+  clickDropDown()
+  addStyleSheet()
+</pre>
+
+<h3>Classes and id's for styling</h3>
+The following are the classes and the description:
+<pre>
+  .dropdown
+    - Class for the div container around button and menu
+  .dropbtn
+    - Class for the button itself
+  .dropdown-content
+    - Class the menu parent/container, it will contain all the menu items
+</pre>
+The following are the id's and their description:
+<pre>
+  #dropDownBtn
+    - ID for the button 
+  #dropDownMenu
+    - ID for the menu parent/container
+</pre>
